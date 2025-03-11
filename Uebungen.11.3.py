@@ -44,3 +44,34 @@ print (points)
 xPos = [points[i][0] for i in range (0, len(points))]
 yPos = [points[i][1] for i in range (0, len(points))]
 print (xPos, yPos)
+
+class Point:
+    def __init__(self, x, y):
+        self.X = x;
+        self.Y = y;
+    def setXY(self, x, y):
+        self.X = x
+        self.Y = y;
+    def getXY (self):
+        return self.X, self.Y
+    def dist(self, point):
+        from math import sqrt
+        return sqrt( (self.X-point.X)**2 + (self.Y - point.Y) **2)
+print (Point(0,0).dist(Point(1,1)))
+
+class Face:
+    def __init__(self, name, color): 
+        self.Name = Name
+        self.Color = color
+    def area(self) : ...
+    def extent(self) : ...
+    
+class rect(Face):
+    def area(self):
+        from math import sqrt
+        return sqrt(self.X*self.Y)
+    def extent(self):
+        return self.X*2+self.Y*2
+        
+
+
